@@ -1,0 +1,15 @@
+# Default mz accent, then teal and navy seeds.
+[
+  {
+    name = "mz-colors";
+    color = "#f29718";
+  }
+  {
+    name = "Desktop teal";
+    color = "#008080";
+  }
+  {
+    name = "Title bar navy";
+    color = "#000080";
+  }
+]

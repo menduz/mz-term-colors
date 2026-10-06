@@ -1,0 +1,303 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="1304" viewBox="0 0 1120 1304" role="img" aria-labelledby="title desc">
+<title id="title">mz-term-colors — orange, teal, and navy seeds</title>
+<desc id="desc">Dark and light themes with a simulated fetch display, 16 ANSI colors, selected text, and a block cursor.</desc>
+<rect width="100%" height="100%" fill="#181a1b"/>
+<g font-family="Iosevka, DejaVu Sans Mono, Liberation Mono, monospace" font-size="14">
+<text x="24" y="38" fill="#ffffff" font-size="24" font-weight="bold" xml:space="preserve">MZ-TERM-COLORS</text>
+<text x="24" y="66" fill="#ffffff" font-size="14" xml:space="preserve">terminal colors generated using a single seed color</text>
+<rect x="24" y="88" width="524" height="376" fill="#2a2419"/>
+<text x="48" y="112" fill="#e2d9cc" font-size="14" font-weight="bold" xml:space="preserve">mz-colors / dark / #f29718</text>
+<text x="45" y="152" fill="#e2d9cc" font-size="14" xml:space="preserve">$ theme-fetch</text>
+<text x="48" y="192" fill="#ff3333" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="110" y="192" fill="#b8cc52" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="48" y="212" fill="#ff3333" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="110" y="212" fill="#b8cc52" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="48" y="232" fill="#ff3333" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="110" y="232" fill="#b8cc52" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="48" y="252" fill="#36a3d9" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="110" y="252" fill="#e7c547" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="48" y="272" fill="#36a3d9" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="110" y="272" fill="#e7c547" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="48" y="292" fill="#36a3d9" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="110" y="292" fill="#e7c547" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="192" y="192" fill="#95e6cb" font-size="14" font-weight="bold" xml:space="preserve">user </text>
+<text x="248" y="192" fill="#e2d9cc" font-size="14" xml:space="preserve">guest@ghostty</text>
+<text x="192" y="212" fill="#95e6cb" font-size="14" font-weight="bold" xml:space="preserve">theme</text>
+<text x="248" y="212" fill="#e2d9cc" font-size="14" xml:space="preserve">mz-colors</text>
+<text x="192" y="232" fill="#95e6cb" font-size="14" font-weight="bold" xml:space="preserve">mode </text>
+<text x="248" y="232" fill="#e2d9cc" font-size="14" xml:space="preserve">dark</text>
+<text x="192" y="252" fill="#95e6cb" font-size="14" font-weight="bold" xml:space="preserve">seed </text>
+<text x="248" y="252" fill="#e2d9cc" font-size="14" xml:space="preserve">#f29718</text>
+<text x="192" y="272" fill="#95e6cb" font-size="14" font-weight="bold" xml:space="preserve">bg   </text>
+<text x="248" y="272" fill="#e2d9cc" font-size="14" xml:space="preserve">#2a2419</text>
+<text x="192" y="292" fill="#95e6cb" font-size="14" font-weight="bold" xml:space="preserve">fg   </text>
+<text x="248" y="292" fill="#e2d9cc" font-size="14" xml:space="preserve">#e2d9cc</text>
+<rect x="48" y="318" width="53" height="25" fill="#000000"/>
+<rect x="107" y="318" width="53" height="25" fill="#ff3333"/>
+<rect x="166" y="318" width="53" height="25" fill="#b8cc52"/>
+<rect x="225" y="318" width="53" height="25" fill="#e7c547"/>
+<rect x="284" y="318" width="53" height="25" fill="#36a3d9"/>
+<rect x="343" y="318" width="53" height="25" fill="#f07178"/>
+<rect x="402" y="318" width="53" height="25" fill="#95e6cb"/>
+<rect x="461" y="318" width="53" height="25" fill="#f0f0f0"/>
+<rect x="48" y="349" width="53" height="25" fill="#707070"/>
+<rect x="107" y="349" width="53" height="25" fill="#ff6565"/>
+<rect x="166" y="349" width="53" height="25" fill="#eafe84"/>
+<rect x="225" y="349" width="53" height="25" fill="#fff779"/>
+<rect x="284" y="349" width="53" height="25" fill="#68d5ff"/>
+<rect x="343" y="349" width="53" height="25" fill="#ffa3aa"/>
+<rect x="402" y="349" width="53" height="25" fill="#c7fffd"/>
+<rect x="461" y="349" width="53" height="25" fill="#ffffff"/>
+<text x="48" y="402" fill="#e2d9cc" font-size="12" xml:space="preserve">ANSI 0–7 / 8–15</text>
+<rect x="48" y="418" width="151" height="23" fill="#f29718"/>
+<text x="52" y="435" fill="#404040" font-size="14" xml:space="preserve">selected text</text>
+<text x="224" y="435" fill="#e2d9cc" font-size="14" xml:space="preserve">$ </text>
+<rect x="243" y="418" width="10" height="23" fill="#f29718"/>
+<text x="244" y="435" fill="#2a2419" font-size="14" xml:space="preserve">_</text>
+<rect x="572" y="88" width="524" height="376" fill="#f9f2e3"/>
+<text x="596" y="112" fill="#30271a" font-size="14" font-weight="bold" xml:space="preserve">mz-colors / light / #f29718</text>
+<text x="593" y="152" fill="#30271a" font-size="14" xml:space="preserve">$ theme-fetch</text>
+<text x="596" y="192" fill="#cc1111" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="658" y="192" fill="#4a8a0a" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="596" y="212" fill="#cc1111" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="658" y="212" fill="#4a8a0a" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="596" y="232" fill="#cc1111" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="658" y="232" fill="#4a8a0a" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="596" y="252" fill="#1565a8" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="658" y="252" fill="#9b7c00" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="596" y="272" fill="#1565a8" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="658" y="272" fill="#9b7c00" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="596" y="292" fill="#1565a8" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="658" y="292" fill="#9b7c00" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="740" y="192" fill="#1a7a5a" font-size="14" font-weight="bold" xml:space="preserve">user </text>
+<text x="796" y="192" fill="#30271a" font-size="14" xml:space="preserve">guest@ghostty</text>
+<text x="740" y="212" fill="#1a7a5a" font-size="14" font-weight="bold" xml:space="preserve">theme</text>
+<text x="796" y="212" fill="#30271a" font-size="14" xml:space="preserve">mz-colors</text>
+<text x="740" y="232" fill="#1a7a5a" font-size="14" font-weight="bold" xml:space="preserve">mode </text>
+<text x="796" y="232" fill="#30271a" font-size="14" xml:space="preserve">light</text>
+<text x="740" y="252" fill="#1a7a5a" font-size="14" font-weight="bold" xml:space="preserve">seed </text>
+<text x="796" y="252" fill="#30271a" font-size="14" xml:space="preserve">#f29718</text>
+<text x="740" y="272" fill="#1a7a5a" font-size="14" font-weight="bold" xml:space="preserve">bg   </text>
+<text x="796" y="272" fill="#30271a" font-size="14" xml:space="preserve">#f9f2e3</text>
+<text x="740" y="292" fill="#1a7a5a" font-size="14" font-weight="bold" xml:space="preserve">fg   </text>
+<text x="796" y="292" fill="#30271a" font-size="14" xml:space="preserve">#30271a</text>
+<rect x="596" y="318" width="53" height="25" fill="#1a1a1a"/>
+<rect x="655" y="318" width="53" height="25" fill="#cc1111"/>
+<rect x="714" y="318" width="53" height="25" fill="#4a8a0a"/>
+<rect x="773" y="318" width="53" height="25" fill="#9b7c00"/>
+<rect x="832" y="318" width="53" height="25" fill="#1565a8"/>
+<rect x="891" y="318" width="53" height="25" fill="#a8404a"/>
+<rect x="950" y="318" width="53" height="25" fill="#1a7a5a"/>
+<rect x="1009" y="318" width="53" height="25" fill="#d0cdc8"/>
+<rect x="596" y="349" width="53" height="25" fill="#4a4a4a"/>
+<rect x="655" y="349" width="53" height="25" fill="#f04444"/>
+<rect x="714" y="349" width="53" height="25" fill="#759650"/>
+<rect x="773" y="349" width="53" height="25" fill="#a3861f"/>
+<rect x="832" y="349" width="53" height="25" fill="#338fd4"/>
+<rect x="891" y="349" width="53" height="25" fill="#d06b7e"/>
+<rect x="950" y="349" width="53" height="25" fill="#33957d"/>
+<rect x="1009" y="349" width="53" height="25" fill="#fafaf5"/>
+<text x="596" y="402" fill="#30271a" font-size="12" xml:space="preserve">ANSI 0–7 / 8–15</text>
+<rect x="596" y="418" width="151" height="23" fill="#f29718"/>
+<text x="600" y="435" fill="#404040" font-size="14" xml:space="preserve">selected text</text>
+<text x="772" y="435" fill="#30271a" font-size="14" xml:space="preserve">$ </text>
+<rect x="791" y="418" width="10" height="23" fill="#c27913"/>
+<text x="792" y="435" fill="#191817" font-size="14" xml:space="preserve">_</text>
+<rect x="24" y="488" width="524" height="376" fill="#0d2125"/>
+<text x="48" y="512" fill="#cad6d6" font-size="14" font-weight="bold" xml:space="preserve">Desktop teal / dark / #008080</text>
+<text x="45" y="552" fill="#cad6d6" font-size="14" xml:space="preserve">$ theme-fetch</text>
+<text x="48" y="592" fill="#ff3333" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="110" y="592" fill="#b8cc52" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="48" y="612" fill="#ff3333" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="110" y="612" fill="#b8cc52" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="48" y="632" fill="#ff3333" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="110" y="632" fill="#b8cc52" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="48" y="652" fill="#36a3d9" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="110" y="652" fill="#e7c547" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="48" y="672" fill="#36a3d9" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="110" y="672" fill="#e7c547" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="48" y="692" fill="#36a3d9" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="110" y="692" fill="#e7c547" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="192" y="592" fill="#95e6cb" font-size="14" font-weight="bold" xml:space="preserve">user </text>
+<text x="248" y="592" fill="#cad6d6" font-size="14" xml:space="preserve">guest@ghostty</text>
+<text x="192" y="612" fill="#95e6cb" font-size="14" font-weight="bold" xml:space="preserve">theme</text>
+<text x="248" y="612" fill="#cad6d6" font-size="14" xml:space="preserve">Desktop teal</text>
+<text x="192" y="632" fill="#95e6cb" font-size="14" font-weight="bold" xml:space="preserve">mode </text>
+<text x="248" y="632" fill="#cad6d6" font-size="14" xml:space="preserve">dark</text>
+<text x="192" y="652" fill="#95e6cb" font-size="14" font-weight="bold" xml:space="preserve">seed </text>
+<text x="248" y="652" fill="#cad6d6" font-size="14" xml:space="preserve">#008080</text>
+<text x="192" y="672" fill="#95e6cb" font-size="14" font-weight="bold" xml:space="preserve">bg   </text>
+<text x="248" y="672" fill="#cad6d6" font-size="14" xml:space="preserve">#0d2125</text>
+<text x="192" y="692" fill="#95e6cb" font-size="14" font-weight="bold" xml:space="preserve">fg   </text>
+<text x="248" y="692" fill="#cad6d6" font-size="14" xml:space="preserve">#cad6d6</text>
+<rect x="48" y="718" width="53" height="25" fill="#000000"/>
+<rect x="107" y="718" width="53" height="25" fill="#ff3333"/>
+<rect x="166" y="718" width="53" height="25" fill="#b8cc52"/>
+<rect x="225" y="718" width="53" height="25" fill="#e7c547"/>
+<rect x="284" y="718" width="53" height="25" fill="#36a3d9"/>
+<rect x="343" y="718" width="53" height="25" fill="#f07178"/>
+<rect x="402" y="718" width="53" height="25" fill="#95e6cb"/>
+<rect x="461" y="718" width="53" height="25" fill="#f0f0f0"/>
+<rect x="48" y="749" width="53" height="25" fill="#707070"/>
+<rect x="107" y="749" width="53" height="25" fill="#ff6565"/>
+<rect x="166" y="749" width="53" height="25" fill="#eafe84"/>
+<rect x="225" y="749" width="53" height="25" fill="#fff779"/>
+<rect x="284" y="749" width="53" height="25" fill="#68d5ff"/>
+<rect x="343" y="749" width="53" height="25" fill="#ffa3aa"/>
+<rect x="402" y="749" width="53" height="25" fill="#c7fffd"/>
+<rect x="461" y="749" width="53" height="25" fill="#ffffff"/>
+<text x="48" y="802" fill="#cad6d6" font-size="12" xml:space="preserve">ANSI 0–7 / 8–15</text>
+<rect x="48" y="818" width="151" height="23" fill="#008080"/>
+<text x="52" y="835" fill="#ffffff" font-size="14" xml:space="preserve">selected text</text>
+<text x="224" y="835" fill="#cad6d6" font-size="14" xml:space="preserve">$ </text>
+<rect x="243" y="818" width="10" height="23" fill="#008080"/>
+<text x="244" y="835" fill="#ffffff" font-size="14" xml:space="preserve">_</text>
+<rect x="572" y="488" width="524" height="376" fill="#e6f0ec"/>
+<text x="596" y="512" fill="#172424" font-size="14" font-weight="bold" xml:space="preserve">Desktop teal / light / #008080</text>
+<text x="593" y="552" fill="#172424" font-size="14" xml:space="preserve">$ theme-fetch</text>
+<text x="596" y="592" fill="#cc1111" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="658" y="592" fill="#4a8a0a" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="596" y="612" fill="#cc1111" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="658" y="612" fill="#4a8a0a" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="596" y="632" fill="#cc1111" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="658" y="632" fill="#4a8a0a" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="596" y="652" fill="#1565a8" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="658" y="652" fill="#9b7c00" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="596" y="672" fill="#1565a8" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="658" y="672" fill="#9b7c00" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="596" y="692" fill="#1565a8" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="658" y="692" fill="#9b7c00" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="740" y="592" fill="#1a7a5a" font-size="14" font-weight="bold" xml:space="preserve">user </text>
+<text x="796" y="592" fill="#172424" font-size="14" xml:space="preserve">guest@ghostty</text>
+<text x="740" y="612" fill="#1a7a5a" font-size="14" font-weight="bold" xml:space="preserve">theme</text>
+<text x="796" y="612" fill="#172424" font-size="14" xml:space="preserve">Desktop teal</text>
+<text x="740" y="632" fill="#1a7a5a" font-size="14" font-weight="bold" xml:space="preserve">mode </text>
+<text x="796" y="632" fill="#172424" font-size="14" xml:space="preserve">light</text>
+<text x="740" y="652" fill="#1a7a5a" font-size="14" font-weight="bold" xml:space="preserve">seed </text>
+<text x="796" y="652" fill="#172424" font-size="14" xml:space="preserve">#008080</text>
+<text x="740" y="672" fill="#1a7a5a" font-size="14" font-weight="bold" xml:space="preserve">bg   </text>
+<text x="796" y="672" fill="#172424" font-size="14" xml:space="preserve">#e6f0ec</text>
+<text x="740" y="692" fill="#1a7a5a" font-size="14" font-weight="bold" xml:space="preserve">fg   </text>
+<text x="796" y="692" fill="#172424" font-size="14" xml:space="preserve">#172424</text>
+<rect x="596" y="718" width="53" height="25" fill="#1a1a1a"/>
+<rect x="655" y="718" width="53" height="25" fill="#cc1111"/>
+<rect x="714" y="718" width="53" height="25" fill="#4a8a0a"/>
+<rect x="773" y="718" width="53" height="25" fill="#9b7c00"/>
+<rect x="832" y="718" width="53" height="25" fill="#1565a8"/>
+<rect x="891" y="718" width="53" height="25" fill="#a8404a"/>
+<rect x="950" y="718" width="53" height="25" fill="#1a7a5a"/>
+<rect x="1009" y="718" width="53" height="25" fill="#d0cdc8"/>
+<rect x="596" y="749" width="53" height="25" fill="#4a4a4a"/>
+<rect x="655" y="749" width="53" height="25" fill="#f04444"/>
+<rect x="714" y="749" width="53" height="25" fill="#6e8d4b"/>
+<rect x="773" y="749" width="53" height="25" fill="#a3861f"/>
+<rect x="832" y="749" width="53" height="25" fill="#3188c9"/>
+<rect x="891" y="749" width="53" height="25" fill="#c56678"/>
+<rect x="950" y="749" width="53" height="25" fill="#33957d"/>
+<rect x="1009" y="749" width="53" height="25" fill="#fafaf5"/>
+<text x="596" y="802" fill="#172424" font-size="12" xml:space="preserve">ANSI 0–7 / 8–15</text>
+<rect x="596" y="818" width="151" height="23" fill="#008080"/>
+<text x="600" y="835" fill="#ffffff" font-size="14" xml:space="preserve">selected text</text>
+<text x="772" y="835" fill="#172424" font-size="14" xml:space="preserve">$ </text>
+<rect x="791" y="818" width="10" height="23" fill="#008080"/>
+<text x="792" y="835" fill="#f6faf8" font-size="14" xml:space="preserve">_</text>
+<rect x="24" y="888" width="524" height="376" fill="#0d1225"/>
+<text x="48" y="912" fill="#cacad6" font-size="14" font-weight="bold" xml:space="preserve">Title bar navy / dark / #000080</text>
+<text x="45" y="952" fill="#cacad6" font-size="14" xml:space="preserve">$ theme-fetch</text>
+<text x="48" y="992" fill="#ff3333" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="110" y="992" fill="#b8cc52" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="48" y="1012" fill="#ff3333" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="110" y="1012" fill="#b8cc52" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="48" y="1032" fill="#ff3333" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="110" y="1032" fill="#b8cc52" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="48" y="1052" fill="#36a3d9" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="110" y="1052" fill="#e7c547" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="48" y="1072" fill="#36a3d9" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="110" y="1072" fill="#e7c547" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="48" y="1092" fill="#36a3d9" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="110" y="1092" fill="#e7c547" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="192" y="992" fill="#95e6cb" font-size="14" font-weight="bold" xml:space="preserve">user </text>
+<text x="248" y="992" fill="#cacad6" font-size="14" xml:space="preserve">guest@ghostty</text>
+<text x="192" y="1012" fill="#95e6cb" font-size="14" font-weight="bold" xml:space="preserve">theme</text>
+<text x="248" y="1012" fill="#cacad6" font-size="14" xml:space="preserve">Title bar navy</text>
+<text x="192" y="1032" fill="#95e6cb" font-size="14" font-weight="bold" xml:space="preserve">mode </text>
+<text x="248" y="1032" fill="#cacad6" font-size="14" xml:space="preserve">dark</text>
+<text x="192" y="1052" fill="#95e6cb" font-size="14" font-weight="bold" xml:space="preserve">seed </text>
+<text x="248" y="1052" fill="#cacad6" font-size="14" xml:space="preserve">#000080</text>
+<text x="192" y="1072" fill="#95e6cb" font-size="14" font-weight="bold" xml:space="preserve">bg   </text>
+<text x="248" y="1072" fill="#cacad6" font-size="14" xml:space="preserve">#0d1225</text>
+<text x="192" y="1092" fill="#95e6cb" font-size="14" font-weight="bold" xml:space="preserve">fg   </text>
+<text x="248" y="1092" fill="#cacad6" font-size="14" xml:space="preserve">#cacad6</text>
+<rect x="48" y="1118" width="53" height="25" fill="#000000"/>
+<rect x="107" y="1118" width="53" height="25" fill="#ff3333"/>
+<rect x="166" y="1118" width="53" height="25" fill="#b8cc52"/>
+<rect x="225" y="1118" width="53" height="25" fill="#e7c547"/>
+<rect x="284" y="1118" width="53" height="25" fill="#36a3d9"/>
+<rect x="343" y="1118" width="53" height="25" fill="#f07178"/>
+<rect x="402" y="1118" width="53" height="25" fill="#95e6cb"/>
+<rect x="461" y="1118" width="53" height="25" fill="#f0f0f0"/>
+<rect x="48" y="1149" width="53" height="25" fill="#656565"/>
+<rect x="107" y="1149" width="53" height="25" fill="#ff6565"/>
+<rect x="166" y="1149" width="53" height="25" fill="#eafe84"/>
+<rect x="225" y="1149" width="53" height="25" fill="#fff779"/>
+<rect x="284" y="1149" width="53" height="25" fill="#68d5ff"/>
+<rect x="343" y="1149" width="53" height="25" fill="#ffa3aa"/>
+<rect x="402" y="1149" width="53" height="25" fill="#c7fffd"/>
+<rect x="461" y="1149" width="53" height="25" fill="#ffffff"/>
+<text x="48" y="1202" fill="#cacad6" font-size="12" xml:space="preserve">ANSI 0–7 / 8–15</text>
+<rect x="48" y="1218" width="151" height="23" fill="#000080"/>
+<text x="52" y="1235" fill="#ffffff" font-size="14" xml:space="preserve">selected text</text>
+<text x="224" y="1235" fill="#cacad6" font-size="14" xml:space="preserve">$ </text>
+<rect x="243" y="1218" width="10" height="23" fill="#5959ac"/>
+<text x="244" y="1235" fill="#e7e7e9" font-size="14" xml:space="preserve">_</text>
+<rect x="572" y="888" width="524" height="376" fill="#e6e6ec"/>
+<text x="596" y="912" fill="#171724" font-size="14" font-weight="bold" xml:space="preserve">Title bar navy / light / #000080</text>
+<text x="593" y="952" fill="#171724" font-size="14" xml:space="preserve">$ theme-fetch</text>
+<text x="596" y="992" fill="#cc1111" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="658" y="992" fill="#4a8a0a" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="596" y="1012" fill="#cc1111" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="658" y="1012" fill="#4a8a0a" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="596" y="1032" fill="#cc1111" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="658" y="1032" fill="#4a8a0a" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="596" y="1052" fill="#1565a8" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="658" y="1052" fill="#9b7c00" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="596" y="1072" fill="#1565a8" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="658" y="1072" fill="#9b7c00" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="596" y="1092" fill="#1565a8" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="658" y="1092" fill="#9b7c00" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="740" y="992" fill="#1a7a5a" font-size="14" font-weight="bold" xml:space="preserve">user </text>
+<text x="796" y="992" fill="#171724" font-size="14" xml:space="preserve">guest@ghostty</text>
+<text x="740" y="1012" fill="#1a7a5a" font-size="14" font-weight="bold" xml:space="preserve">theme</text>
+<text x="796" y="1012" fill="#171724" font-size="14" xml:space="preserve">Title bar navy</text>
+<text x="740" y="1032" fill="#1a7a5a" font-size="14" font-weight="bold" xml:space="preserve">mode </text>
+<text x="796" y="1032" fill="#171724" font-size="14" xml:space="preserve">light</text>
+<text x="740" y="1052" fill="#1a7a5a" font-size="14" font-weight="bold" xml:space="preserve">seed </text>
+<text x="796" y="1052" fill="#171724" font-size="14" xml:space="preserve">#000080</text>
+<text x="740" y="1072" fill="#1a7a5a" font-size="14" font-weight="bold" xml:space="preserve">bg   </text>
+<text x="796" y="1072" fill="#171724" font-size="14" xml:space="preserve">#e6e6ec</text>
+<text x="740" y="1092" fill="#1a7a5a" font-size="14" font-weight="bold" xml:space="preserve">fg   </text>
+<text x="796" y="1092" fill="#171724" font-size="14" xml:space="preserve">#171724</text>
+<rect x="596" y="1118" width="53" height="25" fill="#1a1a1a"/>
+<rect x="655" y="1118" width="53" height="25" fill="#cc1111"/>
+<rect x="714" y="1118" width="53" height="25" fill="#4a8a0a"/>
+<rect x="773" y="1118" width="53" height="25" fill="#9b7c00"/>
+<rect x="832" y="1118" width="53" height="25" fill="#1565a8"/>
+<rect x="891" y="1118" width="53" height="25" fill="#a8404a"/>
+<rect x="950" y="1118" width="53" height="25" fill="#1a7a5a"/>
+<rect x="1009" y="1118" width="53" height="25" fill="#d0cdc8"/>
+<rect x="596" y="1149" width="53" height="25" fill="#4a4a4a"/>
+<rect x="655" y="1149" width="53" height="25" fill="#f04444"/>
+<rect x="714" y="1149" width="53" height="25" fill="#6e8d4b"/>
+<rect x="773" y="1149" width="53" height="25" fill="#9a7e1e"/>
+<rect x="832" y="1149" width="53" height="25" fill="#3188c9"/>
+<rect x="891" y="1149" width="53" height="25" fill="#c56678"/>
+<rect x="950" y="1149" width="53" height="25" fill="#308d76"/>
+<rect x="1009" y="1149" width="53" height="25" fill="#fafaf5"/>
+<text x="596" y="1202" fill="#171724" font-size="12" xml:space="preserve">ANSI 0–7 / 8–15</text>
+<rect x="596" y="1218" width="151" height="23" fill="#000080"/>
+<text x="600" y="1235" fill="#ffffff" font-size="14" xml:space="preserve">selected text</text>
+<text x="772" y="1235" fill="#171724" font-size="14" xml:space="preserve">$ </text>
+<rect x="791" y="1218" width="10" height="23" fill="#000080"/>
+<text x="792" y="1235" fill="#e6e6ec" font-size="14" xml:space="preserve">_</text>
+</g>
+</svg>
