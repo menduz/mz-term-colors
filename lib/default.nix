@@ -39,13 +39,27 @@ let
     cursor = 3;
     # The text in the cursor and in a selection: 4.5 (AA).
     selection = 4.5;
-    # The ANSI colors on the background: 3.
-    palette = 3;
+    # The ANSI colors on the background: 4.5 (AA), because programs write
+    # text in them.
+    palette = 4.5;
+    # Ghostty `minimum-contrast`: Ghostty draws a glyph in black or white when
+    # its contrast on the cell is less. Then text in a color of the role of the
+    # background (white in the light variant, black in the dark variant) and
+    # text in RGB colors does not disappear.
+    minimum = 3;
+    # Faint text on the background: 3. Ghostty draws faint text with
+    # `faint-opacity` (default 0.5), and `minimum-contrast` does not see that
+    # opacity.
+    faint = 3;
   };
+
+  # A bright color must be visibly lighter than its normal color: its
+  # contrast on the background differs by this value or more.
+  brightStep = 0.25;
 in
 rec {
   color = colorLib;
-  inherit palettes defaultContrast;
+  inherit palettes variants defaultContrast;
 
   # The theme of one variant ("dark" or "light") for the input color. All
   # other arguments are optional:
@@ -53,7 +67,7 @@ rec {
   #   background, foreground  the base colors, before the tint
   #   tint                    0..1: how much of the color goes into the background
   #   palette                 16 ANSI colors
-  #   contrast                minimum ratios: { text; cursor; selection; palette; }
+  #   contrast                minimum ratios: { text; cursor; selection; palette; minimum; faint; }
   mkTheme =
     {
       color,
@@ -73,8 +87,52 @@ rec {
       ratios = defaultContrast // contrast;
       basePalette = map colorLib.normalize (pick palette v.palette);
 
-      bg = colorLib.mix (colorLib.normalize (pick background v.background)) c (pick tint v.tint);
+      # The background with the tint. A strong tint of a light color can make
+      # the background so gray that no text gets the text ratio. Then the
+      # tint is less, in steps of 1/20, until white text (dark variant) or
+      # black text (light variant) gets that ratio.
+      baseBackground = colorLib.normalize (pick background v.background);
+      extreme = if variant == "dark" then "#ffffff" else "#000000";
+      bg = lib.findFirst (b: colorLib.contrast b extreme >= ratios.text) baseBackground (
+        map (i: colorLib.mix baseBackground c (pick tint v.tint * (1 - i / 20.0))) (lib.range 0 20)
+      );
       cursor = colorLib.readable bg c ratios.cursor;
+
+      # Each color that is not of the role of the background gets the palette
+      # ratio. For red to cyan (1..6), the bright color (9..14) must stay
+      # lighter than the normal color. On a light background, a lighter color
+      # has less contrast: the normal color gets more contrast than the bright
+      # color. On a dark background, the bright color gets more contrast than
+      # the normal color.
+      base = i: builtins.elemAt basePalette i;
+      readableAt = i: ratio: colorLib.readable bg (base i) ratio;
+      chromatic = i: (i >= 1 && i <= 6) || (i >= 9 && i <= 14);
+      dark = colorLib.isDark bg;
+      slot =
+        i:
+        if builtins.elem i v.backgroundSlots then
+          base i
+        else if !chromatic i then
+          readableAt i ratios.palette
+        else if i <= 6 then
+          (
+            if dark then
+              readableAt i ratios.palette
+            else
+              readableAt i (lib.max ratios.palette (colorLib.contrast bg (slot (i + 8)) + brightStep))
+          )
+        else if dark then
+          readableAt i (lib.max ratios.palette (colorLib.contrast bg (slot (i - 8)) + brightStep))
+        else
+          readableAt i ratios.palette;
+
+      fg = colorLib.readable bg (colorLib.mix (pick foreground v.foreground) c 0.1) ratios.text;
+
+      # The smallest opacity from 0.5 (the default of Ghostty) in steps of
+      # 0.05 that gives faint text the faint ratio.
+      faintOpacity = lib.findFirst (o: colorLib.contrast bg (colorLib.mix bg fg o) >= ratios.faint) 1.0 (
+        map (i: i / 20.0) (lib.range 10 20)
+      );
     in
     assert lib.assertMsg (
       builtins.length basePalette == 16
@@ -83,14 +141,14 @@ rec {
       inherit variant;
       color = c;
       background = bg;
-      foreground = colorLib.readable bg (colorLib.mix (pick foreground v.foreground) c 0.1) ratios.text;
+      foreground = fg;
       cursor-color = cursor;
       cursor-text = colorLib.readable cursor bg ratios.selection;
       selection-background = c;
       selection-foreground = colorLib.readable c "#ffffff" ratios.selection;
-      palette = lib.imap0 (
-        i: p: if builtins.elem i v.backgroundSlots then p else colorLib.readable bg p ratios.palette
-      ) basePalette;
+      palette = lib.genList slot 16;
+      minimum-contrast = ratios.minimum;
+      faint-opacity = faintOpacity;
     };
 
   # The dark and the light theme of one color: { dark = ...; light = ...; }.
@@ -117,6 +175,10 @@ rec {
         "cursor-text"
         "selection-background"
         "selection-foreground"
+      ]
+      ++ [
+        "minimum-contrast = ${builtins.toJSON theme.minimum-contrast}"
+        "faint-opacity = ${builtins.toJSON theme.faint-opacity}"
       ]
       ++ lib.imap0 (i: p: "palette = ${toString i}=${p}") theme.palette
     )

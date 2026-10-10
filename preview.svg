@@ -8,11 +8,11 @@
 <rect x="24" y="88" width="524" height="376" fill="#2a2419"/>
 <text x="48" y="112" fill="#e2d9cc" font-size="14" font-weight="bold" xml:space="preserve">mz-colors / dark / #f29718</text>
 <text x="45" y="152" fill="#e2d9cc" font-size="14" xml:space="preserve">$ theme-fetch</text>
-<text x="48" y="192" fill="#ff3333" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="48" y="192" fill="#ff4747" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
 <text x="110" y="192" fill="#b8cc52" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
-<text x="48" y="212" fill="#ff3333" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="48" y="212" fill="#ff4747" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
 <text x="110" y="212" fill="#b8cc52" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
-<text x="48" y="232" fill="#ff3333" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="48" y="232" fill="#ff4747" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
 <text x="110" y="232" fill="#b8cc52" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
 <text x="48" y="252" fill="#36a3d9" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
 <text x="110" y="252" fill="#e7c547" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
@@ -33,14 +33,14 @@
 <text x="192" y="292" fill="#95e6cb" font-size="14" font-weight="bold" xml:space="preserve">fg   </text>
 <text x="248" y="292" fill="#e2d9cc" font-size="14" xml:space="preserve">#e2d9cc</text>
 <rect x="48" y="318" width="53" height="25" fill="#000000"/>
-<rect x="107" y="318" width="53" height="25" fill="#ff3333"/>
+<rect x="107" y="318" width="53" height="25" fill="#ff4747"/>
 <rect x="166" y="318" width="53" height="25" fill="#b8cc52"/>
 <rect x="225" y="318" width="53" height="25" fill="#e7c547"/>
 <rect x="284" y="318" width="53" height="25" fill="#36a3d9"/>
 <rect x="343" y="318" width="53" height="25" fill="#f07178"/>
 <rect x="402" y="318" width="53" height="25" fill="#95e6cb"/>
 <rect x="461" y="318" width="53" height="25" fill="#f0f0f0"/>
-<rect x="48" y="349" width="53" height="25" fill="#707070"/>
+<rect x="48" y="349" width="53" height="25" fill="#8e8e8e"/>
 <rect x="107" y="349" width="53" height="25" fill="#ff6565"/>
 <rect x="166" y="349" width="53" height="25" fill="#eafe84"/>
 <rect x="225" y="349" width="53" height="25" fill="#fff779"/>
@@ -57,45 +57,45 @@
 <rect x="572" y="88" width="524" height="376" fill="#f9f2e3"/>
 <text x="596" y="112" fill="#30271a" font-size="14" font-weight="bold" xml:space="preserve">mz-colors / light / #f29718</text>
 <text x="593" y="152" fill="#30271a" font-size="14" xml:space="preserve">$ theme-fetch</text>
-<text x="596" y="192" fill="#cc1111" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
-<text x="658" y="192" fill="#4a8a0a" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
-<text x="596" y="212" fill="#cc1111" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
-<text x="658" y="212" fill="#4a8a0a" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
-<text x="596" y="232" fill="#cc1111" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
-<text x="658" y="232" fill="#4a8a0a" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="596" y="192" fill="#c21010" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="658" y="192" fill="#3b6e08" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="596" y="212" fill="#c21010" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="658" y="212" fill="#3b6e08" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="596" y="232" fill="#c21010" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="658" y="232" fill="#3b6e08" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
 <text x="596" y="252" fill="#1565a8" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
-<text x="658" y="252" fill="#9b7c00" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="658" y="252" fill="#745d00" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
 <text x="596" y="272" fill="#1565a8" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
-<text x="658" y="272" fill="#9b7c00" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="658" y="272" fill="#745d00" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
 <text x="596" y="292" fill="#1565a8" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
-<text x="658" y="292" fill="#9b7c00" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
-<text x="740" y="192" fill="#1a7a5a" font-size="14" font-weight="bold" xml:space="preserve">user </text>
+<text x="658" y="292" fill="#745d00" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="740" y="192" fill="#176e51" font-size="14" font-weight="bold" xml:space="preserve">user </text>
 <text x="796" y="192" fill="#30271a" font-size="14" xml:space="preserve">guest@ghostty</text>
-<text x="740" y="212" fill="#1a7a5a" font-size="14" font-weight="bold" xml:space="preserve">theme</text>
+<text x="740" y="212" fill="#176e51" font-size="14" font-weight="bold" xml:space="preserve">theme</text>
 <text x="796" y="212" fill="#30271a" font-size="14" xml:space="preserve">mz-colors</text>
-<text x="740" y="232" fill="#1a7a5a" font-size="14" font-weight="bold" xml:space="preserve">mode </text>
+<text x="740" y="232" fill="#176e51" font-size="14" font-weight="bold" xml:space="preserve">mode </text>
 <text x="796" y="232" fill="#30271a" font-size="14" xml:space="preserve">light</text>
-<text x="740" y="252" fill="#1a7a5a" font-size="14" font-weight="bold" xml:space="preserve">seed </text>
+<text x="740" y="252" fill="#176e51" font-size="14" font-weight="bold" xml:space="preserve">seed </text>
 <text x="796" y="252" fill="#30271a" font-size="14" xml:space="preserve">#f29718</text>
-<text x="740" y="272" fill="#1a7a5a" font-size="14" font-weight="bold" xml:space="preserve">bg   </text>
+<text x="740" y="272" fill="#176e51" font-size="14" font-weight="bold" xml:space="preserve">bg   </text>
 <text x="796" y="272" fill="#30271a" font-size="14" xml:space="preserve">#f9f2e3</text>
-<text x="740" y="292" fill="#1a7a5a" font-size="14" font-weight="bold" xml:space="preserve">fg   </text>
+<text x="740" y="292" fill="#176e51" font-size="14" font-weight="bold" xml:space="preserve">fg   </text>
 <text x="796" y="292" fill="#30271a" font-size="14" xml:space="preserve">#30271a</text>
 <rect x="596" y="318" width="53" height="25" fill="#1a1a1a"/>
-<rect x="655" y="318" width="53" height="25" fill="#cc1111"/>
-<rect x="714" y="318" width="53" height="25" fill="#4a8a0a"/>
-<rect x="773" y="318" width="53" height="25" fill="#9b7c00"/>
+<rect x="655" y="318" width="53" height="25" fill="#c21010"/>
+<rect x="714" y="318" width="53" height="25" fill="#3b6e08"/>
+<rect x="773" y="318" width="53" height="25" fill="#745d00"/>
 <rect x="832" y="318" width="53" height="25" fill="#1565a8"/>
 <rect x="891" y="318" width="53" height="25" fill="#a8404a"/>
-<rect x="950" y="318" width="53" height="25" fill="#1a7a5a"/>
+<rect x="950" y="318" width="53" height="25" fill="#176e51"/>
 <rect x="1009" y="318" width="53" height="25" fill="#d0cdc8"/>
 <rect x="596" y="349" width="53" height="25" fill="#4a4a4a"/>
-<rect x="655" y="349" width="53" height="25" fill="#f04444"/>
-<rect x="714" y="349" width="53" height="25" fill="#759650"/>
-<rect x="773" y="349" width="53" height="25" fill="#a3861f"/>
-<rect x="832" y="349" width="53" height="25" fill="#338fd4"/>
-<rect x="891" y="349" width="53" height="25" fill="#d06b7e"/>
-<rect x="950" y="349" width="53" height="25" fill="#33957d"/>
+<rect x="655" y="349" width="53" height="25" fill="#c03636"/>
+<rect x="714" y="349" width="53" height="25" fill="#58713c"/>
+<rect x="773" y="349" width="53" height="25" fill="#7d6718"/>
+<rect x="832" y="349" width="53" height="25" fill="#2971a7"/>
+<rect x="891" y="349" width="53" height="25" fill="#a45564"/>
+<rect x="950" y="349" width="53" height="25" fill="#287461"/>
 <rect x="1009" y="349" width="53" height="25" fill="#fafaf5"/>
 <text x="596" y="402" fill="#30271a" font-size="12" xml:space="preserve">ANSI 0–7 / 8–15</text>
 <rect x="596" y="418" width="151" height="23" fill="#f29718"/>
@@ -138,7 +138,7 @@
 <rect x="343" y="718" width="53" height="25" fill="#f07178"/>
 <rect x="402" y="718" width="53" height="25" fill="#95e6cb"/>
 <rect x="461" y="718" width="53" height="25" fill="#f0f0f0"/>
-<rect x="48" y="749" width="53" height="25" fill="#707070"/>
+<rect x="48" y="749" width="53" height="25" fill="#8e8e8e"/>
 <rect x="107" y="749" width="53" height="25" fill="#ff6565"/>
 <rect x="166" y="749" width="53" height="25" fill="#eafe84"/>
 <rect x="225" y="749" width="53" height="25" fill="#fff779"/>
@@ -155,45 +155,45 @@
 <rect x="572" y="488" width="524" height="376" fill="#e6f0ec"/>
 <text x="596" y="512" fill="#172424" font-size="14" font-weight="bold" xml:space="preserve">Desktop teal / light / #008080</text>
 <text x="593" y="552" fill="#172424" font-size="14" xml:space="preserve">$ theme-fetch</text>
-<text x="596" y="592" fill="#cc1111" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
-<text x="658" y="592" fill="#4a8a0a" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
-<text x="596" y="612" fill="#cc1111" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
-<text x="658" y="612" fill="#4a8a0a" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
-<text x="596" y="632" fill="#cc1111" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
-<text x="658" y="632" fill="#4a8a0a" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
-<text x="596" y="652" fill="#1565a8" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
-<text x="658" y="652" fill="#9b7c00" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
-<text x="596" y="672" fill="#1565a8" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
-<text x="658" y="672" fill="#9b7c00" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
-<text x="596" y="692" fill="#1565a8" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
-<text x="658" y="692" fill="#9b7c00" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
-<text x="740" y="592" fill="#1a7a5a" font-size="14" font-weight="bold" xml:space="preserve">user </text>
+<text x="596" y="592" fill="#c21010" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="658" y="592" fill="#3b6e08" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="596" y="612" fill="#c21010" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="658" y="612" fill="#3b6e08" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="596" y="632" fill="#c21010" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="658" y="632" fill="#3b6e08" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="596" y="652" fill="#1460a0" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="658" y="652" fill="#745d00" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="596" y="672" fill="#1460a0" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="658" y="672" fill="#745d00" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="596" y="692" fill="#1460a0" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="658" y="692" fill="#745d00" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="740" y="592" fill="#176e51" font-size="14" font-weight="bold" xml:space="preserve">user </text>
 <text x="796" y="592" fill="#172424" font-size="14" xml:space="preserve">guest@ghostty</text>
-<text x="740" y="612" fill="#1a7a5a" font-size="14" font-weight="bold" xml:space="preserve">theme</text>
+<text x="740" y="612" fill="#176e51" font-size="14" font-weight="bold" xml:space="preserve">theme</text>
 <text x="796" y="612" fill="#172424" font-size="14" xml:space="preserve">Desktop teal</text>
-<text x="740" y="632" fill="#1a7a5a" font-size="14" font-weight="bold" xml:space="preserve">mode </text>
+<text x="740" y="632" fill="#176e51" font-size="14" font-weight="bold" xml:space="preserve">mode </text>
 <text x="796" y="632" fill="#172424" font-size="14" xml:space="preserve">light</text>
-<text x="740" y="652" fill="#1a7a5a" font-size="14" font-weight="bold" xml:space="preserve">seed </text>
+<text x="740" y="652" fill="#176e51" font-size="14" font-weight="bold" xml:space="preserve">seed </text>
 <text x="796" y="652" fill="#172424" font-size="14" xml:space="preserve">#008080</text>
-<text x="740" y="672" fill="#1a7a5a" font-size="14" font-weight="bold" xml:space="preserve">bg   </text>
+<text x="740" y="672" fill="#176e51" font-size="14" font-weight="bold" xml:space="preserve">bg   </text>
 <text x="796" y="672" fill="#172424" font-size="14" xml:space="preserve">#e6f0ec</text>
-<text x="740" y="692" fill="#1a7a5a" font-size="14" font-weight="bold" xml:space="preserve">fg   </text>
+<text x="740" y="692" fill="#176e51" font-size="14" font-weight="bold" xml:space="preserve">fg   </text>
 <text x="796" y="692" fill="#172424" font-size="14" xml:space="preserve">#172424</text>
 <rect x="596" y="718" width="53" height="25" fill="#1a1a1a"/>
-<rect x="655" y="718" width="53" height="25" fill="#cc1111"/>
-<rect x="714" y="718" width="53" height="25" fill="#4a8a0a"/>
-<rect x="773" y="718" width="53" height="25" fill="#9b7c00"/>
-<rect x="832" y="718" width="53" height="25" fill="#1565a8"/>
-<rect x="891" y="718" width="53" height="25" fill="#a8404a"/>
-<rect x="950" y="718" width="53" height="25" fill="#1a7a5a"/>
+<rect x="655" y="718" width="53" height="25" fill="#c21010"/>
+<rect x="714" y="718" width="53" height="25" fill="#3b6e08"/>
+<rect x="773" y="718" width="53" height="25" fill="#745d00"/>
+<rect x="832" y="718" width="53" height="25" fill="#1460a0"/>
+<rect x="891" y="718" width="53" height="25" fill="#a03d46"/>
+<rect x="950" y="718" width="53" height="25" fill="#176e51"/>
 <rect x="1009" y="718" width="53" height="25" fill="#d0cdc8"/>
 <rect x="596" y="749" width="53" height="25" fill="#4a4a4a"/>
-<rect x="655" y="749" width="53" height="25" fill="#f04444"/>
-<rect x="714" y="749" width="53" height="25" fill="#6e8d4b"/>
-<rect x="773" y="749" width="53" height="25" fill="#a3861f"/>
-<rect x="832" y="749" width="53" height="25" fill="#3188c9"/>
-<rect x="891" y="749" width="53" height="25" fill="#c56678"/>
-<rect x="950" y="749" width="53" height="25" fill="#33957d"/>
+<rect x="655" y="749" width="53" height="25" fill="#c03636"/>
+<rect x="714" y="749" width="53" height="25" fill="#58713c"/>
+<rect x="773" y="749" width="53" height="25" fill="#7d6718"/>
+<rect x="832" y="749" width="53" height="25" fill="#266a9c"/>
+<rect x="891" y="749" width="53" height="25" fill="#994f5d"/>
+<rect x="950" y="749" width="53" height="25" fill="#287461"/>
 <rect x="1009" y="749" width="53" height="25" fill="#fafaf5"/>
 <text x="596" y="802" fill="#172424" font-size="12" xml:space="preserve">ANSI 0–7 / 8–15</text>
 <rect x="596" y="818" width="151" height="23" fill="#008080"/>
@@ -236,7 +236,7 @@
 <rect x="343" y="1118" width="53" height="25" fill="#f07178"/>
 <rect x="402" y="1118" width="53" height="25" fill="#95e6cb"/>
 <rect x="461" y="1118" width="53" height="25" fill="#f0f0f0"/>
-<rect x="48" y="1149" width="53" height="25" fill="#656565"/>
+<rect x="48" y="1149" width="53" height="25" fill="#848484"/>
 <rect x="107" y="1149" width="53" height="25" fill="#ff6565"/>
 <rect x="166" y="1149" width="53" height="25" fill="#eafe84"/>
 <rect x="225" y="1149" width="53" height="25" fill="#fff779"/>
@@ -253,45 +253,45 @@
 <rect x="572" y="888" width="524" height="376" fill="#e6e6ec"/>
 <text x="596" y="912" fill="#171724" font-size="14" font-weight="bold" xml:space="preserve">Title bar navy / light / #000080</text>
 <text x="593" y="952" fill="#171724" font-size="14" xml:space="preserve">$ theme-fetch</text>
-<text x="596" y="992" fill="#cc1111" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
-<text x="658" y="992" fill="#4a8a0a" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
-<text x="596" y="1012" fill="#cc1111" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
-<text x="658" y="1012" fill="#4a8a0a" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
-<text x="596" y="1032" fill="#cc1111" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
-<text x="658" y="1032" fill="#4a8a0a" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
-<text x="596" y="1052" fill="#1565a8" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
-<text x="658" y="1052" fill="#9b7c00" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
-<text x="596" y="1072" fill="#1565a8" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
-<text x="658" y="1072" fill="#9b7c00" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
-<text x="596" y="1092" fill="#1565a8" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
-<text x="658" y="1092" fill="#9b7c00" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
-<text x="740" y="992" fill="#1a7a5a" font-size="14" font-weight="bold" xml:space="preserve">user </text>
+<text x="596" y="992" fill="#b80f0f" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="658" y="992" fill="#386808" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="596" y="1012" fill="#b80f0f" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="658" y="1012" fill="#386808" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="596" y="1032" fill="#b80f0f" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="658" y="1032" fill="#386808" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="596" y="1052" fill="#1460a0" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="658" y="1052" fill="#6d5700" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="596" y="1072" fill="#1460a0" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="658" y="1072" fill="#6d5700" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="596" y="1092" fill="#1460a0" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="658" y="1092" fill="#6d5700" font-size="14" font-weight="bold" xml:space="preserve">#####</text>
+<text x="740" y="992" fill="#16684d" font-size="14" font-weight="bold" xml:space="preserve">user </text>
 <text x="796" y="992" fill="#171724" font-size="14" xml:space="preserve">guest@ghostty</text>
-<text x="740" y="1012" fill="#1a7a5a" font-size="14" font-weight="bold" xml:space="preserve">theme</text>
+<text x="740" y="1012" fill="#16684d" font-size="14" font-weight="bold" xml:space="preserve">theme</text>
 <text x="796" y="1012" fill="#171724" font-size="14" xml:space="preserve">Title bar navy</text>
-<text x="740" y="1032" fill="#1a7a5a" font-size="14" font-weight="bold" xml:space="preserve">mode </text>
+<text x="740" y="1032" fill="#16684d" font-size="14" font-weight="bold" xml:space="preserve">mode </text>
 <text x="796" y="1032" fill="#171724" font-size="14" xml:space="preserve">light</text>
-<text x="740" y="1052" fill="#1a7a5a" font-size="14" font-weight="bold" xml:space="preserve">seed </text>
+<text x="740" y="1052" fill="#16684d" font-size="14" font-weight="bold" xml:space="preserve">seed </text>
 <text x="796" y="1052" fill="#171724" font-size="14" xml:space="preserve">#000080</text>
-<text x="740" y="1072" fill="#1a7a5a" font-size="14" font-weight="bold" xml:space="preserve">bg   </text>
+<text x="740" y="1072" fill="#16684d" font-size="14" font-weight="bold" xml:space="preserve">bg   </text>
 <text x="796" y="1072" fill="#171724" font-size="14" xml:space="preserve">#e6e6ec</text>
-<text x="740" y="1092" fill="#1a7a5a" font-size="14" font-weight="bold" xml:space="preserve">fg   </text>
+<text x="740" y="1092" fill="#16684d" font-size="14" font-weight="bold" xml:space="preserve">fg   </text>
 <text x="796" y="1092" fill="#171724" font-size="14" xml:space="preserve">#171724</text>
 <rect x="596" y="1118" width="53" height="25" fill="#1a1a1a"/>
-<rect x="655" y="1118" width="53" height="25" fill="#cc1111"/>
-<rect x="714" y="1118" width="53" height="25" fill="#4a8a0a"/>
-<rect x="773" y="1118" width="53" height="25" fill="#9b7c00"/>
-<rect x="832" y="1118" width="53" height="25" fill="#1565a8"/>
-<rect x="891" y="1118" width="53" height="25" fill="#a8404a"/>
-<rect x="950" y="1118" width="53" height="25" fill="#1a7a5a"/>
+<rect x="655" y="1118" width="53" height="25" fill="#b80f0f"/>
+<rect x="714" y="1118" width="53" height="25" fill="#386808"/>
+<rect x="773" y="1118" width="53" height="25" fill="#6d5700"/>
+<rect x="832" y="1118" width="53" height="25" fill="#1460a0"/>
+<rect x="891" y="1118" width="53" height="25" fill="#a03d46"/>
+<rect x="950" y="1118" width="53" height="25" fill="#16684d"/>
 <rect x="1009" y="1118" width="53" height="25" fill="#d0cdc8"/>
 <rect x="596" y="1149" width="53" height="25" fill="#4a4a4a"/>
-<rect x="655" y="1149" width="53" height="25" fill="#f04444"/>
-<rect x="714" y="1149" width="53" height="25" fill="#6e8d4b"/>
-<rect x="773" y="1149" width="53" height="25" fill="#9a7e1e"/>
-<rect x="832" y="1149" width="53" height="25" fill="#3188c9"/>
-<rect x="891" y="1149" width="53" height="25" fill="#c56678"/>
-<rect x="950" y="1149" width="53" height="25" fill="#308d76"/>
+<rect x="655" y="1149" width="53" height="25" fill="#b43333"/>
+<rect x="714" y="1149" width="53" height="25" fill="#506737"/>
+<rect x="773" y="1149" width="53" height="25" fill="#735f16"/>
+<rect x="832" y="1149" width="53" height="25" fill="#266a9c"/>
+<rect x="891" y="1149" width="53" height="25" fill="#994f5d"/>
+<rect x="950" y="1149" width="53" height="25" fill="#256c5a"/>
 <rect x="1009" y="1149" width="53" height="25" fill="#fafaf5"/>
 <text x="596" y="1202" fill="#171724" font-size="12" xml:space="preserve">ANSI 0–7 / 8–15</text>
 <rect x="596" y="1218" width="151" height="23" fill="#000080"/>

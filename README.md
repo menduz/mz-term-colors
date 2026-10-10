@@ -67,8 +67,18 @@ in gc.toGhostty (gc.mkTheme { color = "#008080"; variant = "light"; })
 Use `mkThemes { color = "#008080"; }` for both variants. Use `mkTheme` to
 set `background`, `foreground`, `tint`, `palette`, or `contrast`.
 
-Minimum contrast ratios: text 7; cursor 3; selection text 4.5; ANSI colors 3.
-Background palette slots keep their source colors.
+Minimum contrast ratios: text 7; cursor 3; selection text 4.5; ANSI colors
+4.5. Each bright color is lighter than its normal color. Background palette
+slots (white in light themes, black in dark themes) keep their source colors.
+
+Each theme also sets two Ghostty options:
+
+- `minimum-contrast = 3`: Ghostty draws text with less contrast in black or
+  white. Text in a background slot or in an RGB color does not disappear.
+- `faint-opacity`: 0.5 (the Ghostty default) or more, so faint text keeps a
+  contrast of 3.
+
+A tint that leaves the text without its contrast is reduced.
 
 ## Check
 
@@ -76,7 +86,10 @@ Background palette slots keep their source colors.
 nix flake check
 ```
 
-Checks cover 24 themes, contrast ratios, and Home Manager output.
+Checks cover 96 themes (12 colors, both variants, strong tints, no tint, and
+the palette of the other variant): the contrast of each ANSI color, the color
+that Ghostty draws after `minimum-contrast`, faint text, bright
+against normal colors, known values, and Home Manager output.
 
 ## License
 
