@@ -1,10 +1,15 @@
 # Home Manager module: Ghostty themes from one color. Each theme NAME gives
 # the files ~/.config/ghostty/themes/NAME-dark and NAME-light. Ghostty finds a
 # theme there by its name.
-{ config, lib, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 let
   cfg = config.programs.mz-term-colors;
-  gc = import ./lib { inherit lib; };
+  gc = import ./lib { inherit pkgs; };
 
   themeType = lib.types.submodule (
     { name, config, ... }:
@@ -23,8 +28,8 @@ let
             contrast.text = 4.5;
           };
           description = ''
-            Arguments of `mkTheme` for the dark theme: `background`,
-            `foreground`, `tint`, `palette`, `contrast`.
+            Arguments of `mkTheme` (lib/theme.js) for the dark theme:
+            `background`, `foreground`, `tint`, `palette`, `contrast`.
           '';
         };
         light = lib.mkOption {
@@ -32,11 +37,11 @@ let
           default = { };
           description = "Arguments of `mkTheme` for the light theme.";
         };
-        themes = lib.mkOption {
-          type = lib.types.attrs;
+        files = lib.mkOption {
+          type = lib.types.attrsOf lib.types.package;
           readOnly = true;
-          default = gc.mkThemes { inherit (config) color dark light; };
-          description = "The two themes: { dark; light; }.";
+          default = gc.ghosttyThemes { inherit (config) color dark light; };
+          description = "The two theme files: { dark; light; }.";
         };
         setting = lib.mkOption {
           type = lib.types.str;
@@ -82,8 +87,8 @@ in
     ];
 
     xdg.configFile = lib.concatMapAttrs (name: t: {
-      "ghostty/themes/${name}-dark".text = gc.toGhostty t.themes.dark;
-      "ghostty/themes/${name}-light".text = gc.toGhostty t.themes.light;
+      "ghostty/themes/${name}-dark".source = t.files.dark;
+      "ghostty/themes/${name}-light".source = t.files.light;
     }) cfg.themes;
 
     programs.ghostty.settings = lib.mkIf (cfg.default != null) {

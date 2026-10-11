@@ -1,0 +1,635 @@
+<!doctype html>
+<!--
+  The web generator of mz-term-colors. Open this file in a browser; it needs
+  no server. The themes come from ../lib/theme.js, the generator of the Nix
+  builds, and the columns from ../lib/preview.js, the preview of the README.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mz-term-colors generator</title>
+<script src="../lib/theme.js"></script>
+<script src="../lib/preview.js"></script>
+<script src="win-classic-colors.js"></script>
+<script src="ghostty-presets.js"></script>
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #181a1b;
+    --panel: #232627;
+    --line: #3a3e40;
+    --text: #e6e6e6;
+    --dim: #9aa0a3;
+    --accent: #f29718;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 13px/1.4 system-ui, sans-serif;
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    min-height: 100vh;
+  }
+  aside {
+    border-right: 1px solid var(--line);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    height: 100vh;
+    overflow-y: auto;
+    position: sticky;
+    top: 0;
+  }
+  main { padding: 16px; overflow-x: auto; }
+  h1 { font-size: 16px; margin: 0; letter-spacing: 0.05em; }
+  h2 { font-size: 12px; margin: 0 0 6px; color: var(--dim); text-transform: uppercase; letter-spacing: 0.08em; }
+  section { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 10px; }
+  button, input, select, textarea { font: inherit; color: inherit; }
+  .mono, input[type=text], textarea, pre { font-family: Iosevka, "DejaVu Sans Mono", monospace; }
+  button, select {
+    background: #2f3335; border: 1px solid var(--line); border-radius: 4px; padding: 3px 9px; cursor: pointer;
+  }
+  button:hover, select:hover { border-color: var(--dim); }
+  button:disabled { opacity: 0.4; cursor: default; }
+  input[type=text], input[type=number], textarea {
+    background: #121415; border: 1px solid var(--line); border-radius: 4px; padding: 3px 6px;
+  }
+  input[type=text] { width: 7.5em; }
+  input[type=number] { width: 5em; }
+  input:invalid { border-color: #d33; }
+  textarea { width: 100%; height: 9em; font-size: 12px; resize: vertical; white-space: pre; }
+
+  /* A slot: one of the two columns. */
+  .slot { padding: 8px; border: 2px solid transparent; border-radius: 6px; cursor: pointer; }
+  .slot + .slot { margin-top: 6px; }
+  .slot.active { border-color: var(--accent); background: #2a2d2e; }
+  .slot.off > :not(.top) { opacity: 0.5; }
+  .slot .top { display: flex; align-items: center; gap: 8px; }
+  .slot .name { font-weight: bold; font-size: 15px; width: 1.2em; }
+  .slot .grow { flex: 1; }
+  .slot .body { margin: 8px 0 0 calc(1.2em + 8px); display: flex; flex-direction: column; gap: 6px; }
+  .slot .pick { display: flex; align-items: center; gap: 8px; }
+  .slot input[type=color] { width: 34px; height: 28px; padding: 0; border: 1px solid var(--line); background: none; }
+  .slot .source { color: var(--dim); font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .slot .line { display: flex; gap: 6px; align-items: center; color: var(--dim); font-size: 12px; flex-wrap: wrap; }
+  .slot .file-head { display: flex; gap: 6px; align-items: center; justify-content: space-between; color: var(--dim); }
+  .hint { color: var(--dim); font-size: 12px; margin: 6px 0 0; }
+  .error { color: #ff6b6b; white-space: pre-wrap; font-size: 12px; }
+
+  /* The options of a slot. */
+  details summary { cursor: pointer; color: var(--dim); }
+  .options { display: grid; grid-template-columns: 1fr auto; gap: 4px 10px; align-items: center; margin-top: 8px; }
+  .options label { color: var(--dim); }
+  .options .buttons { grid-column: 1 / -1; display: flex; gap: 6px; margin-top: 4px; }
+
+  .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; }
+  .seg button { border: 0; border-radius: 0; }
+  .seg button.on { background: var(--accent); color: #111; }
+  .controls { display: flex; flex-direction: column; gap: 8px; }
+  .controls .line { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+
+  /* The swatches of win-classic-theme. */
+  .preset { display: grid; grid-template-columns: 112px 1fr; gap: 6px; align-items: center; margin: 3px 0; }
+  .preset .label { color: var(--dim); font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .swatches { display: flex; flex-wrap: wrap; gap: 2px; }
+  .swatch {
+    width: 17px; height: 17px; border: 1px solid #0006; border-radius: 2px; padding: 0; cursor: pointer;
+  }
+  .swatch:hover { outline: 2px solid var(--text); outline-offset: 1px; }
+  .swatch.picked { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+  /* The output. */
+  .columns { display: flex; gap: 24px; align-items: flex-start; flex-wrap: wrap; }
+  .column { width: var(--column-width); }
+  .column header, .swipe-header { display: flex; gap: 10px; align-items: baseline; margin-bottom: 8px; min-height: 22px; }
+  .column header b, .swipe-header b { font-size: 15px; }
+  .swipe-header { width: var(--column-width); justify-content: space-between; }
+  .swipe-header > span { display: flex; gap: 8px; align-items: baseline; }
+  .svg svg { display: block; }
+  pre { background: #121415; border: 1px solid var(--line); border-radius: 4px; padding: 8px; font-size: 12px; overflow-x: auto; margin: 6px 0 0; }
+
+  /* Swipe: A at the left of the divider, B at the right. */
+  .stack {
+    position: relative; width: var(--column-width); height: var(--column-height);
+    cursor: ew-resize; user-select: none; touch-action: none;
+  }
+  .stack > .layer { position: absolute; inset: 0; }
+  .divider {
+    position: absolute; top: -6px; bottom: -6px; width: 2px; margin-left: -1px;
+    background: var(--accent); box-shadow: 0 0 0 1px #0008;
+  }
+  .divider .handle {
+    position: absolute; top: 50%; left: 50%; width: 30px; height: 30px; transform: translate(-50%, -50%);
+    border-radius: 50%; background: var(--accent); color: #111; font-weight: bold;
+    display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 4px #000a;
+  }
+  .divider:focus-visible { outline: none; }
+  .divider:focus-visible .handle { outline: 2px solid var(--text); outline-offset: 2px; }
+  .badge {
+    position: absolute; bottom: 8px; padding: 1px 7px; border-radius: 3px; background: #000a; color: #fff;
+    font-weight: bold; pointer-events: none;
+  }
+</style>
+</head>
+<body>
+<aside>
+  <h1>MZ-TERM-COLORS</h1>
+
+  <section>
+    <h2>Columns</h2>
+    <div id="slots"></div>
+    <p class="hint">A column is a theme made from one color, or a Ghostty theme file. Click a slot, then
+      click a swatch below or pick any color. B is optional.</p>
+  </section>
+
+  <section class="controls">
+    <h2>View</h2>
+    <div class="line">
+      <div class="seg" id="view">
+        <button data-view="side">Side by side</button>
+        <button data-view="swipe">Swipe</button>
+      </div>
+      <button id="swap" title="Swap A and B">A ⇄ B</button>
+    </div>
+    <p class="hint" id="swipe-hint" style="margin:0">Drag on the image, or focus the divider and use the arrow
+      keys (Shift: bigger steps).</p>
+  </section>
+
+  <section>
+    <h2>win-classic-theme colors</h2>
+    <div id="presets"></div>
+  </section>
+</aside>
+
+<main>
+  <div id="output"></div>
+</main>
+
+<script>
+'use strict';
+const gc = MzTermColors;
+const pv = MzTermPreview;
+document.documentElement.style.setProperty('--column-width', pv.columnWidth + 'px');
+document.documentElement.style.setProperty('--column-height', pv.columnHeight + 'px');
+
+// The order of the swatches of a preset: the colors that make a good seed
+// first.
+const KEYS = [
+  'activetitle', 'activetitle1', 'selectedbg', 'desktop', 'inactivetitle', 'bgcolor', 'highlight',
+  'shadow', 'border', 'disabledfg', 'basecolor', 'basefg', 'fgcolor', 'selectedtext',
+  'activetitletext', 'inactivetitletext', 'buttonscolor',
+];
+
+// The options of a slot: the fields of mkTheme. An empty field takes the
+// default of theme.js.
+const OPTIONS = [
+  { key: 'tint.dark', label: 'Tint, dark', step: 0.01, def: gc.variants.dark.tint },
+  { key: 'tint.light', label: 'Tint, light', step: 0.01, def: gc.variants.light.tint },
+  ...Object.entries(gc.defaultContrast).map(([k, def]) => ({
+    key: 'contrast.' + k, label: `Contrast: ${k}`, step: 0.1, def,
+  })),
+];
+
+const VARIANTS = ['dark', 'light'];
+
+// A slot is "generated" (mkTheme from a color) or "ghostty" (the text of two
+// Ghostty theme files).
+const newSlot = (color, source) => ({
+  kind: 'generated', color, source, on: true, options: {},
+  ghostty: { name: '', dark: '', light: '' },
+});
+const defaults = () => ({
+  active: 'a',
+  view: 'side',
+  swipe: 50,
+  slots: { a: newSlot('#f29718', 'mz accent'), b: newSlot('#008080', 'teal · desktop') },
+});
+
+// The state is in the URL hash, so a comparison can be bookmarked.
+const load = () => {
+  const s = defaults();
+  try {
+    const h = location.hash.slice(1);
+    if (h) {
+      const saved = JSON.parse(decodeURIComponent(h));
+      const slot = (name) => {
+        const d = s.slots[name];
+        const v = saved.slots?.[name] || {};
+        return { ...d, ...v, ghostty: { ...d.ghostty, ...v.ghostty } };
+      };
+      Object.assign(s, saved, { slots: { a: slot('a'), b: slot('b') } });
+      // The onion skin of an older version is now the swipe.
+      if (s.view === 'onion') s.view = 'swipe';
+      delete s.opacity;
+      delete s.difference;
+    }
+  } catch (e) {
+    console.warn('bad hash', e);
+  }
+  return s;
+};
+let state = load();
+const save = () => history.replaceState(null, '', '#' + encodeURIComponent(JSON.stringify(state)));
+
+const validHex = (s) => /^#?[0-9a-fA-F]{6}$/.test(s);
+const el = (tag, attrs = {}, ...children) => {
+  const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (k.startsWith('on')) e.addEventListener(k.slice(2), v);
+    else if (k === 'class') e.className = v;
+    else if (k === 'value') e.value = v;
+    else if (v !== false && v != null) e.setAttribute(k, v === true ? '' : v);
+  }
+  e.append(...children);
+  return e;
+};
+const stop = (e) => e.stopPropagation();
+
+// A named color of a Ghostty file, from the CSS colors of the browser. X11
+// and CSS give the same values for most names (not for gray, green, maroon
+// and purple).
+const ctx = document.createElement('canvas').getContext('2d');
+const resolveName = (name) => {
+  if (!/^[a-z ]+$/i.test(name)) return null;
+  ctx.fillStyle = '#010203';
+  ctx.fillStyle = name.replace(/\s+/g, '');
+  return ctx.fillStyle === '#010203' ? null : ctx.fillStyle;
+};
+
+// The arguments of mkThemes for a generated slot.
+const themeArgs = (slot) => {
+  const o = slot.options;
+  const contrast = {};
+  for (const k of Object.keys(gc.defaultContrast)) {
+    if (o['contrast.' + k] != null) contrast[k] = o['contrast.' + k];
+  }
+  const variant = (v) => ({ ...(o['tint.' + v] != null ? { tint: o['tint.' + v] } : {}), contrast });
+  return { color: slot.color, dark: variant('dark'), light: variant('light') };
+};
+
+// The themes of a slot: { dark, light }. A Ghostty slot without the text of
+// one variant gives null for it.
+const themesOf = (slot) => {
+  if (slot.kind === 'generated') return gc.mkThemes(themeArgs(slot));
+  const themes = {};
+  const errors = [];
+  for (const variant of VARIANTS) {
+    const text = slot.ghostty[variant];
+    themes[variant] = null;
+    if (!text.trim()) continue;
+    try {
+      themes[variant] = gc.fromGhostty(text, { variant, resolveName });
+    } catch (e) {
+      errors.push(`${variant}: ${e.message.replace(/\n/g, `\n${variant}: `)}`);
+    }
+  }
+  if (errors.length) throw new Error(errors.join('\n'));
+  return themes;
+};
+
+const setColor = (name, color, source) => {
+  const slot = state.slots[name];
+  slot.kind = 'generated';
+  slot.color = gc.color.normalize(color);
+  slot.source = source;
+  update();
+};
+
+// --- The slots ---------------------------------------------------------------
+
+const optionsBox = (name, slot) => {
+  const options = el('div', { class: 'options' });
+  for (const opt of OPTIONS) {
+    options.append(
+      el('label', { for: `${name}-${opt.key}` }, opt.label),
+      el('input', {
+        type: 'number', id: `${name}-${opt.key}`, step: opt.step, min: 0, placeholder: opt.def,
+        value: slot.options[opt.key] ?? '',
+        onchange: (e) => {
+          const v = e.target.value === '' ? null : Number(e.target.value);
+          if (v == null) delete slot.options[opt.key];
+          else slot.options[opt.key] = v;
+          update();
+        },
+      }),
+    );
+  }
+  const other = name === 'a' ? 'b' : 'a';
+  options.append(el('div', { class: 'buttons' },
+    el('button', { onclick: () => { slot.options = {}; update(); } }, 'Defaults'),
+    el('button', {
+      onclick: () => { state.slots[other].options = { ...slot.options }; update(); },
+    }, `Copy to ${other.toUpperCase()}`),
+  ));
+  const changed = Object.keys(slot.options).length;
+  const details = el('details', { onclick: stop },
+    el('summary', {}, `Options${changed ? ` (${changed} changed)` : ''}`), options);
+  if (slot.optionsOpen) details.open = true;
+  details.addEventListener('toggle', () => { slot.optionsOpen = details.open; save(); });
+  return details;
+};
+
+const generatedBody = (name, slot) => [
+  el('div', { class: 'pick' },
+    el('input', {
+      type: 'color', value: slot.color, onclick: stop,
+      oninput: (e) => setColor(name, e.target.value, 'custom'),
+    }),
+    el('input', {
+      type: 'text', value: slot.color, pattern: '#?[0-9a-fA-F]{6}', spellcheck: 'false', onclick: stop,
+      onchange: (e) => { if (validHex(e.target.value)) setColor(name, e.target.value, 'custom'); },
+    }),
+    el('span', { class: 'source', title: slot.source }, slot.source)),
+  optionsBox(name, slot),
+];
+
+// A Ghostty slot: a preset, and a text box for each variant. Typing changes
+// only the output, so the text box keeps the focus.
+const ghosttyBody = (name, slot) => {
+  const presetSelect = el('select', {
+    onclick: stop,
+    onchange: (e) => {
+      const p = GHOSTTY_PRESETS[Number(e.target.value)];
+      if (p) {
+        slot.ghostty = { name: p.name, dark: p.dark, light: p.light };
+        update();
+      }
+    },
+  }, el('option', { value: '' }, 'Load a preset…'),
+  ...GHOSTTY_PRESETS.map((p, i) => el('option', { value: i }, p.name)));
+
+  const fromGenerated = el('button', {
+    title: 'The theme files of the color and the options of this slot, to change by hand',
+    onclick: (e) => {
+      stop(e);
+      const themes = gc.mkThemes(themeArgs(slot));
+      slot.ghostty = { name: `${slot.color} (edited)`, dark: gc.toGhostty(themes.dark), light: gc.toGhostty(themes.light) };
+      update();
+    },
+  }, `From ${slot.color}`);
+
+  const files = VARIANTS.map((variant) => {
+    const input = el('input', {
+      type: 'file', style: 'display:none',
+      onchange: (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+        file.text().then((text) => {
+          slot.ghostty[variant] = text;
+          if (!slot.ghostty.name) slot.ghostty.name = file.name;
+          update();
+        });
+      },
+    });
+    const area = el('textarea', {
+      spellcheck: 'false', placeholder: `Ghostty theme file (${variant}), e.g.\nbackground = #0f1419\npalette = 1=#ff3333`,
+      value: slot.ghostty[variant], onclick: stop,
+      oninput: (e) => { slot.ghostty[variant] = e.target.value; save(); renderOutput(); },
+    });
+    return el('div', {},
+      el('div', { class: 'file-head' }, el('span', {}, variant),
+        el('span', { class: 'line' },
+          el('button', { onclick: (e) => { stop(e); input.click(); } }, 'Open file…'),
+          el('button', { onclick: (e) => { stop(e); slot.ghostty[variant] = ''; update(); } }, 'Clear'),
+          input)),
+      area);
+  });
+
+  return [
+    el('div', { class: 'line' }, presetSelect, fromGenerated),
+    el('div', { class: 'line' }, 'Name',
+      el('input', {
+        type: 'text', style: 'flex:1', value: slot.ghostty.name, placeholder: 'Ghostty theme', onclick: stop,
+        oninput: (e) => { slot.ghostty.name = e.target.value; save(); renderOutput(); },
+      })),
+    ...files,
+  ];
+};
+
+const renderSlots = () => {
+  const box = document.getElementById('slots');
+  box.replaceChildren();
+  for (const name of ['a', 'b']) {
+    const slot = state.slots[name];
+    const kind = el('div', { class: 'seg', onclick: stop },
+      ...[['generated', 'Color'], ['ghostty', 'Ghostty theme']].map(([k, label]) =>
+        el('button', {
+          class: slot.kind === k ? 'on' : '',
+          onclick: () => { slot.kind = k; state.active = name; update(); },
+        }, label)));
+    const top = el('div', { class: 'top' },
+      el('span', { class: 'name' }, name.toUpperCase()), kind, el('span', { class: 'grow' }));
+    if (name === 'b') {
+      top.append(el('label', { class: 'source', onclick: stop },
+        el('input', {
+          type: 'checkbox', checked: slot.on,
+          onchange: (e) => { slot.on = e.target.checked; update(); },
+        }), ' show'));
+    }
+    const body = el('div', { class: 'body' },
+      ...(slot.kind === 'generated' ? generatedBody(name, slot) : ghosttyBody(name, slot)));
+    box.append(el('div', {
+      class: `slot${state.active === name ? ' active' : ''}${slot.on ? '' : ' off'}`,
+      onclick: () => { if (state.active !== name) { state.active = name; update(); } },
+    }, top, body));
+  }
+};
+
+// --- The swatches ------------------------------------------------------------
+
+const renderPresets = () => {
+  const box = document.getElementById('presets');
+  box.replaceChildren();
+  const active = state.slots[state.active];
+  const picked = active.kind === 'generated' ? active.color : null;
+  for (const [preset, colors] of Object.entries(WIN_CLASSIC_PRESETS)) {
+    const seen = new Map();
+    for (const key of [...KEYS, ...Object.keys(colors)]) {
+      const c = colors[key];
+      if (!c || !validHex(c)) continue;
+      const hex = gc.color.normalize(c);
+      if (!seen.has(hex)) seen.set(hex, []);
+      if (!seen.get(hex).includes(key)) seen.get(hex).push(key);
+    }
+    const swatches = el('div', { class: 'swatches' });
+    for (const [hex, keys] of seen) {
+      swatches.append(el('button', {
+        class: `swatch${hex === picked ? ' picked' : ''}`,
+        style: `background:${hex}`,
+        title: `${preset} · ${keys.join(', ')} ${hex}`,
+        onclick: () => setColor(state.active, hex, `${preset} · ${keys[0]}`),
+      }));
+    }
+    box.append(el('div', { class: 'preset' }, el('span', { class: 'label', title: preset }, preset), swatches));
+  }
+};
+
+// --- The output --------------------------------------------------------------
+
+// The themes and the SVG column of a slot, or the error. The swipe gives one
+// label to both slots, so only the differences show.
+const build = (name, label) => {
+  const slot = state.slots[name];
+  const generated = slot.kind === 'generated';
+  label ??= `${name.toUpperCase()} ${generated ? slot.source : slot.ghostty.name || 'Ghostty theme'}`;
+  try {
+    const themes = themesOf(slot);
+    return { themes, svg: pv.columnSvg(themes, { name: label, seed: generated ? slot.color : 'file' }) };
+  } catch (e) {
+    return { error: e.message };
+  }
+};
+
+const svgBox = (result) => {
+  const box = el('div', { class: result.error ? 'error' : 'svg' });
+  if (result.error) box.textContent = result.error;
+  else box.innerHTML = result.svg;
+  return box;
+};
+
+const ghosttyFiles = (name, result) => {
+  if (result.error || state.slots[name].kind !== 'generated') return el('div');
+  const files = el('details', {}, el('summary', {}, 'Ghostty theme files'));
+  for (const variant of VARIANTS) {
+    const text = gc.toGhostty(result.themes[variant]);
+    files.append(
+      el('div', { style: 'margin-top:8px;display:flex;gap:8px;align-items:center' },
+        el('b', {}, variant),
+        el('button', { onclick: () => navigator.clipboard.writeText(text) }, 'Copy')),
+      el('pre', {}, text),
+    );
+  }
+  return files;
+};
+
+const header = (name) => {
+  const slot = state.slots[name];
+  if (slot.kind === 'ghostty') {
+    return [el('b', {}, name.toUpperCase()), el('span', { style: 'color:var(--dim)' }, slot.ghostty.name || 'Ghostty theme')];
+  }
+  const changed = Object.entries(slot.options).map(([k, v]) => `${k.replace(/^contrast\./, '')}=${v}`).join(' ');
+  return [
+    el('b', {}, name.toUpperCase()),
+    el('span', { class: 'mono' }, slot.color),
+    el('span', { style: 'color:var(--dim)' }, slot.source + (changed ? ` · ${changed}` : '')),
+  ];
+};
+
+// The swipe: A under B, and B cut at the divider. Only the cut changes while
+// the divider moves. A slot with an error gives empty panels, and the error
+// goes above the image: in a layer, the cut can hide it.
+const swipeView = (a, b) => {
+  const layer = (result) =>
+    el('div', { class: 'layer' }, svgBox(result.error ? { svg: pv.columnSvg({ dark: null, light: null }, {}) } : result));
+  const layerA = layer(a);
+  const layerB = layer(b);
+  const errors = [['A', a], ['B', b]]
+    .filter(([, r]) => r.error)
+    .map(([n, r]) => el('div', { class: 'error', style: 'margin-bottom:8px' }, `${n}: ${r.error}`));
+  const divider = el('div', {
+    class: 'divider', tabindex: 0, role: 'slider', 'aria-label': 'Divider between A and B',
+    'aria-valuemin': 0, 'aria-valuemax': 100,
+  }, el('div', { class: 'handle' }, '⇔'));
+  const stack = el('div', { class: 'stack' }, layerA, layerB, divider,
+    el('span', { class: 'badge', style: 'left:8px' }, 'A'),
+    el('span', { class: 'badge', style: 'right:8px' }, 'B'));
+
+  const place = (p) => {
+    state.swipe = Math.round(Math.max(0, Math.min(100, p)) * 10) / 10;
+    layerB.style.clipPath = `inset(0 0 0 ${state.swipe}%)`;
+    divider.style.left = `${state.swipe}%`;
+    divider.setAttribute('aria-valuenow', state.swipe);
+  };
+  const fromPointer = (e) => {
+    const r = stack.getBoundingClientRect();
+    place(((e.clientX - r.left) / r.width) * 100);
+  };
+  let dragging = false;
+  stack.addEventListener('pointerdown', (e) => {
+    dragging = true;
+    stack.setPointerCapture(e.pointerId);
+    divider.focus({ preventScroll: true });
+    fromPointer(e);
+  });
+  stack.addEventListener('pointermove', (e) => { if (dragging) fromPointer(e); });
+  const end = () => { if (dragging) { dragging = false; save(); } };
+  stack.addEventListener('pointerup', end);
+  stack.addEventListener('pointercancel', end);
+  divider.addEventListener('keydown', (e) => {
+    const step = e.shiftKey ? 10 : 1;
+    const to = { ArrowLeft: state.swipe - step, ArrowRight: state.swipe + step, Home: 0, End: 100 }[e.key];
+    if (to == null) return;
+    e.preventDefault();
+    place(to);
+    save();
+  });
+  place(state.swipe);
+
+  return [
+    ...errors,
+    el('div', { class: 'swipe-header' },
+      el('span', {}, '◀', ...header('a')),
+      el('span', {}, ...header('b'), '▶')),
+    stack,
+  ];
+};
+
+const renderOutput = () => {
+  const out = document.getElementById('output');
+  out.replaceChildren();
+  const compare = state.slots.b.on;
+  const swipe = state.view === 'swipe' && compare;
+  const a = build('a', swipe ? 'A/B' : undefined);
+  const b = compare ? build('b', swipe ? 'A/B' : undefined) : null;
+
+  if (swipe) {
+    out.append(...swipeView(a, b));
+    return;
+  }
+  const columns = el('div', { class: 'columns' });
+  for (const [name, result] of compare ? [['a', a], ['b', b]] : [['a', a]]) {
+    columns.append(el('div', { class: 'column' },
+      el('header', {}, ...header(name)),
+      svgBox(result),
+      ghosttyFiles(name, result)));
+  }
+  out.append(columns);
+};
+
+// --- The view controls -------------------------------------------------------
+
+const renderControls = () => {
+  const compare = state.slots.b.on;
+  for (const b of document.querySelectorAll('#view button')) {
+    b.classList.toggle('on', b.dataset.view === state.view);
+  }
+  document.querySelector('#view [data-view=swipe]').disabled = !compare;
+  document.getElementById('swipe-hint').style.display = state.view === 'swipe' && compare ? '' : 'none';
+};
+
+for (const b of document.querySelectorAll('#view button')) {
+  b.addEventListener('click', () => { state.view = b.dataset.view; update(); });
+}
+document.getElementById('swap').addEventListener('click', () => {
+  const { a, b } = state.slots;
+  state.slots = { a: { ...b, on: true }, b: { ...a, on: b.on } };
+  update();
+});
+window.addEventListener('hashchange', () => { state = load(); update(false); });
+
+const update = (store = true) => {
+  if (!state.slots.b.on && state.view === 'swipe') state.view = 'side';
+  renderSlots();
+  renderPresets();
+  renderControls();
+  renderOutput();
+  if (store) save();
+};
+update(false);
+</script>
+</body>
+</html>

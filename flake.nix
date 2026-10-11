@@ -15,18 +15,9 @@
       forSystems = f: nixpkgs.lib.genAttrs systems (system: f nixpkgs.legacyPackages.${system});
     in
     {
-      # The generator, in pure Nix: mkTheme, mkThemes, toGhostty, themeSetting,
-      # and the color functions in `color`.
-      lib = import ./lib { inherit (nixpkgs) lib; };
-
-      # Shared source for the SVG preview and installable example themes.
-      previewData = map (
-        preset:
-        preset
-        // {
-          themes = self.lib.mkThemes { inherit (preset) color; };
-        }
-      ) (import ./presets.nix);
+      # The Nix library: `lib { inherit pkgs; }` gives ghosttyTheme,
+      # ghosttyThemes and themeSetting. The generator is lib/theme.js.
+      lib = import ./lib;
 
       homeManagerModules.ghostty = ./hm-module.nix;
       homeManagerModules.default = self.homeManagerModules.ghostty;
@@ -34,42 +25,46 @@
       packages = forSystems (pkgs: {
         default = self.packages.${pkgs.stdenv.hostPlatform.system}.ghostty-colors;
 
-        # `ghostty-colors COLOR [dark|light]` prints a theme. It uses the nix
-        # command of the system.
+        # `ghostty-colors COLOR [dark|light]` prints a theme.
         ghostty-colors = pkgs.writeShellApplication {
           name = "ghostty-colors";
+          runtimeInputs = [ pkgs.nodejs-slim ];
           text = ''
-            export GC_LIB=${./lib} NIXPKGS_LIB=${nixpkgs}/lib
-          ''
-          + builtins.readFile ./cli.sh;
+            exec node ${./lib}/cli.js "$@"
+          '';
         };
 
-        # The dark and the light theme of some colors, to look at.
-        examples = pkgs.linkFarm "ghostty-colors-examples" (
-          nixpkgs.lib.concatMap (
-            color:
-            let
-              t = self.lib.mkThemes { inherit color; };
-              name = nixpkgs.lib.removePrefix "#" color;
-            in
-            [
-              {
-                name = "${name}-dark";
-                path = pkgs.writeText "${name}-dark" (self.lib.toGhostty t.dark);
-              }
-              {
-                name = "${name}-light";
-                path = pkgs.writeText "${name}-light" (self.lib.toGhostty t.light);
-              }
-            ]
-          ) (map (preset: preset.color) (import ./presets.nix))
-        );
+        # The dark and the light theme of the colors of presets.json, to look
+        # at.
+        examples =
+          let
+            gc = self.lib { inherit pkgs; };
+          in
+          pkgs.linkFarm "ghostty-colors-examples" (
+            nixpkgs.lib.concatMap (
+              preset:
+              let
+                t = gc.ghosttyThemes { inherit (preset) color; };
+                name = nixpkgs.lib.removePrefix "#" preset.color;
+              in
+              [
+                {
+                  name = "${name}-dark";
+                  path = t.dark;
+                }
+                {
+                  name = "${name}-light";
+                  path = t.light;
+                }
+              ]
+            ) (builtins.fromJSON (builtins.readFile ./presets.json))
+          );
       });
 
       checks = forSystems (pkgs: {
         default = import ./tests.nix {
           inherit pkgs;
-          gc = self.lib;
+          gc = self.lib { inherit pkgs; };
         };
       });
 
