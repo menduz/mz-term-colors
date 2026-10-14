@@ -143,20 +143,20 @@ check('normalize', c.normalize('008080') === '#008080' && c.normalize('#00AAff')
   const t = gc.mkTheme({ color: '#008080' });
   check('dark #008080', t.background === '#0d2125' && t.foreground === '#cad6d6' && t['cursor-color'] === '#008080');
 }
-// The light theme of #f29718, the host theme of nix-config: the tint 0.3
-// gives a peach background. The normal colors reach 4.5; blue and magenta
+// The light theme of #f29718, the host theme of nix-config: the tint 0.2
+// gives a light peach background. The normal colors reach 4.5; blue and magenta
 // keep their source colors. The bright colors reach 3. White (7) and
 // bright white (15) keep the colors of the background role, and faint text in
 // white is the mix of white and the background.
 {
   const t = gc.mkTheme({ color: '#f29718', variant: 'light' });
   const expected = [
-    '#1a1a1a', '#c21010', '#3b6e08', '#745d00', '#1565a8', '#a8404a', '#176e51', '#d0cdc8',
-    '#4a4a4a', '#e44141', '#668446', '#90771c', '#2e80be', '#ba6071', '#308d76', '#fafaf5',
+    '#1a1a1a', '#cc1111', '#3f7509', '#7c6300', '#1565a8', '#a8404a', '#197456', '#d0cdc8',
+    '#4a4a4a', '#f04444', '#6e8d4b', '#9a7e1e', '#3188c9', '#c56678', '#308d76', '#fafaf5',
   ];
   check(
     'light #f29718',
-    t.background === '#f8dcb3' &&
+    t.background === '#f8e6c9' &&
       t.foreground === '#30271a' &&
       JSON.stringify(t.palette) === JSON.stringify(expected) &&
       t['minimum-contrast'] === 1 &&
